@@ -14,10 +14,10 @@ interface CartItemProps {
 
 const CartItem = ({count, item}: CartItemProps) => {
     return (
-        <Card p={8} withBorder>
+        <Card p={4} withBorder>
             <Group justify="space-between">
                 <Group>
-                    <Image src={item.img} width="40px" height="40px" />
+                    <Image src={item.img} width="60px" height="60px" radius={4} />
                     <Text>{item.title}</Text>
                 </Group>
                 
