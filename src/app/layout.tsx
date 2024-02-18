@@ -18,13 +18,6 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 
 const theme = createTheme({
   /** Put your mantine theme override here */
-  breakpoints: {
-    xs: '24em',
-    sm: '32em',
-    md: '40em',
-    lg: '60em',
-    xl: '72em',
-  },
 });
 
 const queryClient = new QueryClient();

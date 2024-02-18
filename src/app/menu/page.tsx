@@ -59,7 +59,7 @@ export default function Page() {
             </Anchor>
           </Group>
           
-          <SimpleGrid cols={{ base: 2, sm: 1, md: 2, lg: 2, xl: 2}}>
+          <SimpleGrid cols={{ xs: 1, sm: 1, md: 2, lg: 2, xl: 2}}>
           {pizzas.data?.map((pizza, i) =>
             <Card key={i} withBorder style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               {pizza.img && 
