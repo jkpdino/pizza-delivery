@@ -18,8 +18,8 @@ export default function Page() {
           <Title>Menu</Title>
           
           <SimpleGrid cols={2}>
-          {pizzas.data?.map((pizza) =>
-            <Card withBorder>
+          {pizzas.data?.map((pizza, i) =>
+            <Card key={i} withBorder>
               {pizza.img && 
                 <Card.Section>
                   <Image src={pizza.img}
@@ -42,8 +42,8 @@ export default function Page() {
             </Card>
           )}
 
-          {pizzas.isLoading && new Array(6).map(() => 
-            <Card>
+          {pizzas.isLoading && new Array(6).map((_, i) => 
+            <Card key={i}>
               <Skeleton></Skeleton>
               <Skeleton></Skeleton>
               <Skeleton></Skeleton>
