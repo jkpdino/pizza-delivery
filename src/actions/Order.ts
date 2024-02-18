@@ -148,3 +148,8 @@ export async function deleteItem(order: string, item: string): Promise<void> {
         }
     });
 }
+
+export async function setPaymentSession(order: string) {
+    
+    
+}

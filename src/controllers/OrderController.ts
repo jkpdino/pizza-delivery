@@ -19,6 +19,13 @@ export class Order {
         return new Order(order!);
     }
 
+    static current(): Order | null {
+        let order = localStorage.getItem('order');
+        if (!order) return null;
+
+        return new Order(order);
+    }
+
     async model(): Promise<OrderModel | null> {
         return await getOrder(this.id);
     }

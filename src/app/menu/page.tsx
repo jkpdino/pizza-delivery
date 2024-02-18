@@ -7,6 +7,7 @@ import { Button, Card, Container, Group, SimpleGrid, Skeleton, Stack, Text, Titl
 import { useQuery } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { ShoppingCartIcon } from "lucide-react";
+import { redirect } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 
 export default function Page() {
@@ -39,6 +40,8 @@ export default function Page() {
 
     const buyNow = async (id: string) => {
       await addToCart(id)
+
+      redirect('/checkout')
     }
 
     return (
@@ -56,7 +59,7 @@ export default function Page() {
             </Anchor>
           </Group>
           
-          <SimpleGrid cols={2}>
+          <SimpleGrid cols={{ base: 2, sm: 1, md: 2, lg: 2, xl: 2}}>
           {pizzas.data?.map((pizza, i) =>
             <Card key={i} withBorder style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               {pizza.img && 
@@ -83,7 +86,7 @@ export default function Page() {
             </Card>
           )}
 
-          {pizzas.isLoading && new Array(6).map((_, i) => 
+          {pizzas.isLoading  && new Array(4).map((_, i) => 
             <Card key={i}>
               <Skeleton></Skeleton>
               <Skeleton></Skeleton>

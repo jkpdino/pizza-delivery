@@ -12,10 +12,12 @@
   "dependencies": {
     "@libsql/client": "^0.4.3",
     "@mantine/core": "^7.5.1",
+    "@mantine/form": "^7.5.3",
     "@mantine/hooks": "^7.5.1",
     "@mantine/modals": "^7.5.1",
     "@prisma/adapter-libsql": "^5.9.1",
     "@prisma/client": "^5.9.1",
+    "@stripe/stripe-js": "^3.0.3",
     "@tanstack/react-query": "^5.21.7",
     "@tanstack/react-query-devtools": "^5.21.7",
     "clsx": "^2.1.0",

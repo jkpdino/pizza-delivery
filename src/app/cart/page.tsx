@@ -77,7 +77,7 @@ export default function CartPage() {
 
     return (
         <Container>
-            <Stack p={12}>
+            <Stack p="sm">
                 <Title>Cart</Title>
                 { (pizzas.isLoading || orderModel.isLoading) &&  <Center><Loader /></Center>}
 
@@ -105,9 +105,9 @@ export default function CartPage() {
                                     </Table.Td>
                                     <Table.Td w={80}>${(menuItem.price * item.count).toFixed(2)}</Table.Td>
                                     <Table.Td w={80}>{item.count}</Table.Td>
-                                    <Table.Td w={140}>
-                                        <Group>
-                                            <ActionIconGroup>
+                                    <Table.Td w={120}>
+                                        <Group p={0}>
+                                            <ActionIconGroup orientation="vertical">
                                                 <ActionIcon variant="light" onClick={() => addItem(item.menuItemId)}>
                                                     <PlusIcon />
                                                 </ActionIcon>
@@ -145,7 +145,9 @@ export default function CartPage() {
                 </Table>
                 }
 
-                <Button fullWidth>Checkout</Button>
+                <Anchor href="/checkout">
+                    <Button fullWidth>Checkout</Button>
+                </Anchor>
                 <Anchor href="/menu">
                     <Button fullWidth variant="light">Back to Menu</Button>
                 </Anchor>

@@ -18,6 +18,8 @@ model Order {
   status    String
   created   DateTime    @default(now())
   placed    DateTime?
+
+  payment   OrderPayment?
 }
 
 model OrderItem {
@@ -36,4 +38,11 @@ model MenuItem {
   price       Float
   img         String
   orderItems  OrderItem[]
+}
+
+model OrderPayment {
+  id String @id
+  order Order @relation(fields: [id], references: [id])
+
+  session String
 }
