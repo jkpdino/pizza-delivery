@@ -9,19 +9,34 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@libsql/client": "^0.4.3",
+    "@mantine/core": "^7.5.1",
+    "@mantine/hooks": "^7.5.1",
+    "@mantine/modals": "^7.5.1",
+    "@tanstack/react-query": "^5.20.5",
+    "clsx": "^2.1.0",
+    "drizzle-orm": "^0.29.3",
+    "framer-motion": "^11.0.5",
+    "lucide-react": "^0.331.0",
+    "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.1.0"
+    "simplex-noise": "^4.0.1",
+    "stripe": "^14.16.0",
+    "tailwind-merge": "^2.2.1"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.0",
+    "drizzle-kit": "^0.20.14",
     "eslint": "^8",
-    "eslint-config-next": "14.1.0"
+    "eslint-config-next": "14.1.0",
+    "postcss": "^8.4.35",
+    "postcss-preset-mantine": "^1.13.0",
+    "postcss-simple-vars": "^7.0.1",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
   }
 }
