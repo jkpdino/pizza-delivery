@@ -1,6 +1,9 @@
-'use client'
+'use server'
+
+import { prisma } from "@/db/database";
 
 export interface MenuItem {
+    id: string;
     title: string;
     description: string;
     price: number;
@@ -34,11 +37,23 @@ const PIZZAS = [
     }
 ]
 
-export class MenuController {
+class MenuController {
     async getMenuItems(): Promise<MenuItem[]> {
-        return PIZZAS
+        const items = await prisma.menuItem.findMany();
+
+        return items.map((item) => ({
+            ...item,
+            img: '/pizza/OIG4.jpg'
+        }));
+        
     
     }
 }
 
-export const DefaultMenuController = new MenuController();
+
+const DefaultMenuController = new MenuController();
+
+
+export async function getMenuItems(): Promise<MenuItem[]> {
+    return await DefaultMenuController.getMenuItems()
+}

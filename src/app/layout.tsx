@@ -13,6 +13,8 @@ import { ColorSchemeScript, createTheme, MantineProvider } from '@mantine/core';
 import { ModalsProvider } from "@mantine/modals";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Providers } from "./providers";
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+
 
 const theme = createTheme({
   /** Put your mantine theme override here */

@@ -1,4 +1,3 @@
-import { WavyBackground } from "@/components/ui/wavy-background";
 import { Button, Group, Stack, TextInput, Title, Text } from "@mantine/core";
 
 export default function Page() {
